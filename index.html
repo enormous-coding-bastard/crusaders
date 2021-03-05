@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>It's boys night</h1>
+
+<h3>I freaking love boys night!</h3>
+
+<h5>I'm going to shit myself</h5>
+
+<button id="my-button">Generate A Task</button>
+
+<textarea rows = "2" cols = "80" id="my-input"></textarea>
+
+<img src="hugging.jpg"/>
+
+</body>
+</html>
+
+<script>
+    var button = document.getElementById("my-button");
+    var input = document.getElementById("my-input");
+    
+    var names = ["Joe", "Tom", "Gil", "Alistair", "Lewis"];
+
+    var specificTasks = [
+        "Cuck ",
+        "Seduce ",
+        "Kill the second child of ",
+        "Kill a dynasty member belonging to ",
+        "Become friends with ",
+        "Get this person to declare war on you: ",
+        "Convince this person to become your vassal: ",
+        "Marry this person's child: "
+    ]
+
+    var tasks = [
+        "Seduce everyone",
+        "Become friends with everyone",
+        "Convince everyone to become obese",
+        "Fall in love with a family member",
+        "Become inbred",
+        "Kill your least favourite child",
+        "Play crazy frog 10 times on the discord bot"
+    ]
+    
+    button.addEventListener("click", function() {
+        task = Math.random()
+        if(task < 0.4){
+            input.value = tasks[Math.floor(Math.random() * tasks.length)]
+        } else {
+            input.value = specificTasks[Math.floor(Math.random() * specificTasks.length)] + names[Math.floor(Math.random() * names.length)];
+        }
+    });
+</script>
